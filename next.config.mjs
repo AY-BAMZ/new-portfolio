@@ -9,4 +9,10 @@ export default withBundleAnalyzer({
   eslint: {
     ignoreDuringBuilds: true,
   },
+  images: {
+    domains: [
+      'res.cloudinary.com',
+      'jaakpa-images.s3.eu-north-1.amazonaws.com',
+    ],
+  },
 });

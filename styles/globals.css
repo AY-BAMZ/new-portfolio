@@ -12,6 +12,8 @@
 body {
   font-family: 'Ubuntu', sans-serif !important;
   color: white;
+  background-image: url("https://res.cloudinary.com/dmixz7eur/image/upload/v1719483882/pexels-gasparzaldo-11163069_ktjnfn.jpg");
+  background-size: cover;
 }
 p{
   color: white !important;

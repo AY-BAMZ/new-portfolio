@@ -37,8 +37,9 @@ function ParticlesJs() {
       () => ({
         background: {
           color: {
-            value: "#000000",
+            value: "#00000020",
           },
+          opacity: 0.8,
         },
         fpsLimit: 120,
         fullScreen: {

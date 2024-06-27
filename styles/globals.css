@@ -25,5 +25,25 @@ p{
 .mantine-Modal-body {
   padding: 0% !important;
 }
+
+.blue1{
+  color:  #3FA5FF
+}
+.red1{
+  color:  #FF6C6C
+}
+.green1{
+  color:  #7FFF92
+}
+.purple1{
+  color:  #B379FF
+}
+.yellow1{
+  color:  #FFF67F
+}
+.cray1{
+  color:  #3FFFDC
+}
+
 /* @import './layout.css';
 @import './mantine.css'; */

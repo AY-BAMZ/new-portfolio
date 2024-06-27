@@ -42,7 +42,8 @@ function ParticlesJs() {
         },
         fpsLimit: 120,
         fullScreen: {
-            zIndex: -1
+            zIndex: -1,
+            enable: true
         },
         interactivity: {
           events: {

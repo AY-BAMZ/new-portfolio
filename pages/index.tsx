@@ -1,11 +1,13 @@
-import { Welcome } from '../components/Welcome/Welcome';
-import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
+import ParticlesJs from "@/components/Particles";
 
 export default function HomePage() {
+
   return (
     <>
-      <Welcome />
-      <ColorSchemeToggle />
+    <div>
+      <h1>Hello</h1>
+    </div>
+    <ParticlesJs />
     </>
   );
 }

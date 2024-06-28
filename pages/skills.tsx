@@ -1,8 +1,13 @@
+import SkillsPage from "@/widgets/Skills";
 import Wrapper from "@/widgets/Wrapper";
 import React from "react";
 
 function Skills() {
-  return <Wrapper>Skills</Wrapper>;
+  return (
+    <Wrapper>
+      <SkillsPage />
+    </Wrapper>
+  );
 }
 
 export default Skills;

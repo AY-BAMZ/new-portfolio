@@ -3,13 +3,21 @@ import { cn } from "@/lib";
 import { getTheme } from "@/lib/localStorage";
 import { ScrollArea } from "@mantine/core";
 import {
+  BinanceCoin,
+  Book1,
+  Cpu,
   CpuCharge,
+  Game,
   LocationTick,
   MedalStar,
   Mobile,
   MobileProgramming,
   Monitor,
   MonitorMobbile,
+  Music,
+  PresentionChart,
+  VideoHorizontal,
+  VideoPlay,
 } from "iconsax-react";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
@@ -84,11 +92,21 @@ function AboutPage() {
     },
   ];
 
+  const interests = [
+    { name: "Music", icon: Music },
+    { name: "Book", icon: Book1 },
+    { name: "Technology", icon: Cpu },
+    { name: "Games", icon: Game },
+    { name: "Movies", icon: VideoPlay },
+    { name: "TedX", icon: VideoHorizontal },
+    { name: "Trading", icon: PresentionChart },
+    { name: "Crypto", icon: BinanceCoin },
+  ];
   return (
     <ScrollArea className="h-screen">
       <div className="w-full lg:px-16 p-6 flex flex-col gap-8 py-6 bg-[#0E0F10]">
         <Title title={"About Me"} />
-        <span className="w-full bg-[#00000090] p-8 py-16 flex flex-col gap-16">
+        <span className="w-full bg-[#00000090] p-8 py-16 flex flex-col gap-16 rounded-2xl">
           <span className="flex lg:flex-row flex-col items-center gap-6">
             <Image
               src="https://res.cloudinary.com/dmixz7eur/image/upload/v1718836708/21A17C5B-0536-4E7B-945C-F67C766385BB_1_201_a_saj6vf.jpg"
@@ -173,7 +191,7 @@ function AboutPage() {
             {services.map((item, index) => (
               <span
                 key={index}
-                className="flex flex-col items-center justify-center gap-4 col-span-1 bg-[#00000090] p-6 py-12"
+                className="flex flex-col items-center justify-center gap-4 col-span-1 bg-[#00000090] p-6 py-12 rounded-2xl"
               >
                 <span
                   className={cn(
@@ -187,6 +205,24 @@ function AboutPage() {
                 <p className="text-[14px] font-thin text-center">
                   {item?.description}
                 </p>
+              </span>
+            ))}
+          </span>
+        </span>
+        <span className="my-12 w-full">
+          <Title title={"Interests"} />
+          <span className="grid lg:grid-cols-5 grid-cols-1 gap-6 mt-8 p-8 bg-[#00000090] ">
+            {interests.map((item, index) => (
+              <span
+                key={index}
+                className="flex items-center  gap-4 col-span-1 bg-[#0E0F10] p-6 py-5 rounded-2xl"
+              >
+                <item.icon
+                  size={28}
+                  variant="Bold"
+                  className={cn("", textColors)}
+                />
+                <p className={cn("text-white text-[20px]")}>{item.name}</p>
               </span>
             ))}
           </span>

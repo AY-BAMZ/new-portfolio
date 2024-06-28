@@ -14,7 +14,7 @@ function Title({ title }: any) {
     }
   }, [theme]);
   return (
-    <span className="flex flex-col items-center justify-center bg-[#00000080] py-5 px-6 w-full">
+    <span className="flex flex-col items-center justify-center bg-[#00000080] py-5 px-6 w-full rounded-xl">
       <h1 className="text-[40px] text-center mx-auto">{title}</h1>
       <span className="flex flex-col items-start gap-1">
         <span

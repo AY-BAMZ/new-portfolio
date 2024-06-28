@@ -9,6 +9,7 @@ import {
   UserOctagon,
 } from "iconsax-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 
@@ -71,12 +72,14 @@ function SideBar() {
   return (
     <span className="flex flex-col h-[100vh] w-[150px] bg-[#00000035]">
       <span className="w-full flex items-center justify-center aspect-square border-b-[1px] border-b-black-500">
-        <Image
-          src="https://res.cloudinary.com/dmixz7eur/image/upload/v1673583454/my%20portfolio/logo_wzrddg.png"
-          alt=""
-          width={64}
-          height={64}
-        />
+        <Link href={`/`}>
+          <Image
+            src="https://res.cloudinary.com/dmixz7eur/image/upload/v1673583454/my%20portfolio/logo_wzrddg.png"
+            alt=""
+            width={64}
+            height={64}
+          />
+        </Link>
       </span>
       <span className="py-7">
         {links.map((item: any, index: any) => (

@@ -69,7 +69,7 @@ function MobileNav() {
     router.push(`${value?.link}`);
   };
   return (
-    <span className="flex flex-col h-[80px] w-full bg-[#00000035] absolute bottom-0">
+    <span className="flex flex-col h-[80px] w-full bg-[#000000cc] fixed bottom-0">
       <span className="py-7 flex items-center">
         {links.map((item: any, index: any) => (
           <span

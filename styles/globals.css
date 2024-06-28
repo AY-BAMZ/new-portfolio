@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -10,15 +10,13 @@
   --background-end-rgb: 255, 255, 255;
 }
 body {
-  font-family: 'Ubuntu', sans-serif !important;
+  font-family: "Ubuntu", sans-serif !important;
   color: white;
   background-image: url("https://res.cloudinary.com/dmixz7eur/image/upload/v1719483882/pexels-gasparzaldo-11163069_ktjnfn.jpg");
   background-size: cover;
 }
-p{
-  color: white !important;
-}
-.container{
+
+.container {
   z-index: 1000 !important;
 }
 
@@ -26,23 +24,23 @@ p{
   padding: 0% !important;
 }
 
-.blue1{
-  color:  #3FA5FF
+.blue1 {
+  color: #3fa5ff;
 }
-.red1{
-  color:  #FF6C6C
+.red1 {
+  color: #ff6c6c;
 }
-.green1{
-  color:  #7FFF92
+.green1 {
+  color: #7fff92;
 }
-.purple1{
-  color:  #B379FF
+.purple1 {
+  color: #b379ff;
 }
-.yellow1{
-  color:  #FFF67F
+.yellow1 {
+  color: #fff67f;
 }
-.cray1{
-  color:  #3FFFDC
+.cray1 {
+  color: #3fffdc;
 }
 
 /* @import './layout.css';

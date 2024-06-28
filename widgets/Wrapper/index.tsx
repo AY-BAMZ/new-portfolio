@@ -11,7 +11,7 @@ function Wrapper({ children }: any) {
         <span className="lg:block hidden h-full max-h-full">
           <SideBar />
         </span>
-        <span className="lg:hidden flex h-full max-h-full">
+        <span className="lg:hidden flex h-full max-h-full z-50">
           <MobileNav />
         </span>
         <span className="flex-grow w-full flex justify-center items-center">

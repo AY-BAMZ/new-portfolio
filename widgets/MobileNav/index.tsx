@@ -12,7 +12,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 
-function SideBar() {
+function MobileNav() {
   const router = useRouter();
   const pathname = router.pathname;
   const links = [
@@ -47,7 +47,7 @@ function SideBar() {
       text: "Contacts",
     },
   ];
-
+  console.log("pathname :>> ", pathname);
   const theme = getTheme();
   const [active, setActive] = useState(links[0]?.text);
 
@@ -69,16 +69,8 @@ function SideBar() {
     router.push(`${value?.link}`);
   };
   return (
-    <span className="flex flex-col h-[100vh] w-[150px] bg-[#00000035]">
-      <span className="w-full flex items-center justify-center aspect-square border-b-[1px] border-b-black-500">
-        <Image
-          src="https://res.cloudinary.com/dmixz7eur/image/upload/v1673583454/my%20portfolio/logo_wzrddg.png"
-          alt=""
-          width={64}
-          height={64}
-        />
-      </span>
-      <span className="py-7">
+    <span className="flex flex-col h-[80px] w-full bg-[#00000035] absolute bottom-0">
+      <span className="py-7 flex items-center">
         {links.map((item: any, index: any) => (
           <span
             key={index}
@@ -110,7 +102,7 @@ function SideBar() {
             onClick={() => handleSelect(item)}
           >
             <item.Icon
-              size={40}
+              size={24}
               variant="Bold"
               className={cn(
                 {
@@ -139,7 +131,7 @@ function SideBar() {
                 }
               )}
             />
-            <p className="text-[10px] font-light">{item?.text}</p>
+            <p className="text-[8px] font-light">{item?.text}</p>
           </span>
         ))}
       </span>
@@ -147,4 +139,4 @@ function SideBar() {
   );
 }
 
-export default SideBar;
+export default MobileNav;

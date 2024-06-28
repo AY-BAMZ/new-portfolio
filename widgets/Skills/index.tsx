@@ -144,7 +144,7 @@ function SkillsPage() {
     },
   ];
   return (
-    <ScrollArea className="h-screen">
+    <ScrollArea className="h-screen w-full">
       <div className="w-full lg:px-16 p-6 flex flex-col gap-8 py-6 bg-[#0E0F10]">
         <Title title={"Skills"} />
         <span className="w-full bg-[#00000090] p-8 py-16 grid lg:grid-cols-2 grid-cols-1 gap-8 rounded-2xl">

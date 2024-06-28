@@ -1,7 +1,7 @@
 import Title from "@/components/Title";
 import { cn } from "@/lib";
 import { getTheme } from "@/lib/localStorage";
-import { ScrollArea, Text } from "@mantine/core";
+import { ScrollArea } from "@mantine/core";
 import { LocationTick } from "iconsax-react";
 import React, { useEffect, useState } from "react";
 
@@ -16,17 +16,6 @@ function ExperiencePage() {
       setColor("orange");
     }
   }, [theme]);
-
-  const borderColors = {
-    "border-primary-blue": color === "blue",
-    "border-primary-red": color === "red",
-    "border-primary-green": color === "green",
-    "border-primary-yellow": color === "yellow",
-    "border-primary-cray": color === "cray",
-    "border-primary-purple": color === "purple",
-    "border-primary-orange": color === "orange",
-  };
-
   const textColors = {
     "text-primary-blue": color === "blue",
     "text-primary-red": color === "red",

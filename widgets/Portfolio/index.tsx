@@ -1,7 +1,7 @@
 import Title from "@/components/Title";
 import { cn } from "@/lib";
 import { getTheme } from "@/lib/localStorage";
-import { ScrollArea, Text } from "@mantine/core";
+import { ScrollArea } from "@mantine/core";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";

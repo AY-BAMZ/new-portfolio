@@ -138,19 +138,27 @@ function PortfolioPage() {
     },
   ];
   return (
-    <ScrollArea className="h-screen">
+    <ScrollArea className="h-screen w-[100%]">
       <div className="w-full lg:px-16 p-6 flex flex-col gap-8 py-6 bg-[#0E0F10]">
         <Title title={"Projects"} />
-        <span className="w-full bg-[#00000090] p-8 py-16 gap-8 rounded-2xl">
+        <span className="w-full bg-[#00000090] lg:px-[120px] p-8 py-16 gap-8 rounded-xl flex flex-col">
           {projects.map((item, index) => (
-            <span key={index} className="gap-6 grid lg:grid-cols-2 grid-cols-1">
+            <span
+              key={index}
+              className={cn("flex lg:flex-row flex-col gap-6", {
+                "lg:flex-row-reverse": index % 2 === 1,
+              })}
+            >
               <Image
-                src={item.url}
+                src={item.image}
                 alt=""
-                width={64}
-                height={64}
-                className="w-full col-span-1 aspect-[9/6] object-cover"
+                width={1000}
+                height={1000}
+                className="lg:w-[48%] w-full aspect-[9/6] object-cover rounded-md"
               />
+              <span className="lg:w-[48%] w-full">
+                <h1 className="lg:text-[40px] text-[40px]">{item.name}</h1>
+              </span>
             </span>
           ))}
         </span>

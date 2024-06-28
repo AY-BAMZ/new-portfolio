@@ -1,8 +1,13 @@
+import PortfolioPage from "@/widgets/Portfolio";
 import Wrapper from "@/widgets/Wrapper";
 import React from "react";
 
 function Portfolio() {
-  return <Wrapper>Portfolio</Wrapper>;
+  return (
+    <Wrapper>
+      <PortfolioPage />
+    </Wrapper>
+  );
 }
 
 export default Portfolio;

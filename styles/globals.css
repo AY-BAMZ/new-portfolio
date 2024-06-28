@@ -42,6 +42,9 @@ body {
 .cray1 {
   color: #3fffdc;
 }
+.upper-trans {
+  @apply transform transition hover:-translate-y-2 duration-300;
+}
 
 /* @import './layout.css';
 @import './mantine.css'; */

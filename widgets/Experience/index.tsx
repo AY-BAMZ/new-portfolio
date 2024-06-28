@@ -77,7 +77,7 @@ function ExperiencePage() {
         <Title title={"Experience"} />
         <span className="w-full bg-[#00000090] lg:p-16 p-8 py-16 grid  grid-cols-1 gap-16 rounded-2xl ">
           {experienceList.map((item, index) => (
-            <span key={index} className="flex flex-col gap-2 flex-grow">
+            <span key={index} className="flex flex-col gap-2 flex-grow ">
               <span className={cn("flex items-center gap-1", textColors)}>
                 <LocationTick size="16" variant="Bold" />
                 <p className="text-[16px]">{item.location}</p>

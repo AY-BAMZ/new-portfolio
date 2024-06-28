@@ -106,7 +106,7 @@ function AboutPage() {
     <ScrollArea className="h-screen">
       <div className="w-full lg:px-16 p-6 flex flex-col gap-8 py-6 bg-[#0E0F10]">
         <Title title={"About Me"} />
-        <span className="w-full bg-[#00000090] p-8 py-16 flex flex-col gap-16 rounded-2xl">
+        <span className="w-full bg-[#00000090] p-8 py-16 flex flex-col gap-16 rounded-2xl upper-trans">
           <span className="flex lg:flex-row flex-col items-center gap-6">
             <Image
               src="https://res.cloudinary.com/dmixz7eur/image/upload/v1718836708/21A17C5B-0536-4E7B-945C-F67C766385BB_1_201_a_saj6vf.jpg"
@@ -187,11 +187,11 @@ function AboutPage() {
         </span>
         <span className="my-12 w-full">
           <Title title={"Services"} />
-          <span className="grid lg:grid-cols-3 grid-cols-1 gap-8 mt-8">
+          <span className="grid lg:grid-cols-3 grid-cols-1 gap-8 mt-8 ">
             {services.map((item, index) => (
               <span
                 key={index}
-                className="flex flex-col items-center justify-center gap-4 col-span-1 bg-[#00000090] p-6 py-12 rounded-2xl"
+                className="flex flex-col items-center justify-center gap-4 col-span-1 bg-[#00000090] p-6 py-12 rounded-2xl upper-trans"
               >
                 <span
                   className={cn(
@@ -215,7 +215,7 @@ function AboutPage() {
             {interests.map((item, index) => (
               <span
                 key={index}
-                className="flex items-center  gap-4 col-span-1 bg-[#0E0F10] p-6 py-5 rounded-2xl"
+                className="flex items-center  gap-4 col-span-1 bg-[#0E0F10] p-6 py-5 rounded-2xl upper-trans"
               >
                 <item.icon
                   size={28}

@@ -57,7 +57,7 @@ function ContactPage() {
       link: "https://twitter.com/bamzz_paul",
     },
     {
-      text: "LinkedIn: Ayobami Paul",
+      text: "LinkedIn",
       icon: OceanProtocol,
       link: "https://www.linkedin.com/in/ayobami-paul-4bb370259/",
     },
@@ -85,7 +85,7 @@ function ContactPage() {
           <div className="grid lg:grid-cols-3 grid-cols-1 gap-6">
             {data.map((item, index) => (
               <a href={item.link} key={index}>
-                <div className="flex items-center  gap-4 col-span-1 bg-[#0E0F10] p-6 py-5 rounded-2xl">
+                <div className="flex items-center  gap-4 col-span-1 bg-[#0E0F10] p-6 py-5 rounded-2xl upper-trans">
                   <item.icon
                     size={28}
                     variant="Bold"
@@ -99,11 +99,6 @@ function ContactPage() {
           <div className="flex flex-col">
             <div className="flex flex-col">
               <h4>Or Send a message</h4>
-              {/* <label>Send me a message Via Email</label>
-              <a href="mailto:aybamz181@gmail.com" style={{ marginBottom: 20 }}>
-                <button>Send Message</button>
-              </a>
-              <label>OR Message me on WhatsApp</label> */}
               <a href="https://wa.me/2349066821545">
                 <button
                   className={cn(

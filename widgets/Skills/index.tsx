@@ -1,7 +1,8 @@
 import Title from "@/components/Title";
 import { cn } from "@/lib";
+import { getTheme } from "@/lib/localStorage";
 import { Progress, RingProgress, ScrollArea, Text } from "@mantine/core";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function SkillsPage() {
   const ratings = [
@@ -46,23 +47,44 @@ function SkillsPage() {
       rate: 90,
     },
   ];
+
+  const theme = getTheme();
+  const [color, setColor] = useState("");
+
+  useEffect(() => {
+    if (theme) {
+      setColor(theme);
+    } else {
+      setColor("orange");
+    }
+  }, [theme]);
+
+  const textColors = {
+    "text-primary-blue": color === "blue",
+    "text-primary-red": color === "red",
+    "text-primary-green": color === "green",
+    "text-primary-yellow": color === "yellow",
+    "text-primary-cray": color === "cray",
+    "text-primary-purple": color === "purple",
+    "text-primary-orange": color === "orange",
+  };
   return (
     <ScrollArea className="h-screen w-full">
       <div className="w-full lg:px-16 p-6 flex flex-col gap-8 py-6 bg-[#0E0F10]">
         <Title title={"Skills"} />
         <span className="w-full bg-[#00000090] p-8 py-16 grid lg:grid-cols-2 grid-cols-1 gap-8 rounded-2xl">
-          <span className="col-span-1 flex flex-col gap-4 w-full">
+          <span className="col-span-1 flex flex-col gap-7 w-full">
             {ratings.map((item, index) => (
               <span>
-                <p className={cn("text-white text-[16px] mb-2")}>
+                <p className={cn("text-white text-[16px] mb-2", textColors)}>
                   {item.skill}
                 </p>
                 <Progress
-                  h={20}
+                  h={16}
                   value={item.rate}
                   key={index}
                   w={"100%"}
-                  color={"white"}
+                  color={"#aaa"}
                   animated
                   bg={"#444"}
                 />
@@ -86,7 +108,7 @@ function SkillsPage() {
                       fw={500}
                       ta="center"
                       size="50px"
-                      className="text-white"
+                      className={cn("text-white")}
                     >
                       {item.rate}%
                     </Text>
@@ -95,7 +117,7 @@ function SkillsPage() {
                       fw={300}
                       ta="center"
                       size="16px"
-                      className="text-white mt-1"
+                      className={cn("text-white mt-1", textColors)}
                     >
                       {item.skill}
                     </Text>

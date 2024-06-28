@@ -18,6 +18,7 @@ import {
   VideoPlay,
 } from "iconsax-react";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 function PortfolioPage() {
@@ -32,14 +33,14 @@ function PortfolioPage() {
     }
   }, [theme]);
 
-  const borderColors = {
-    "border-primary-blue": color === "blue",
-    "border-primary-red": color === "red",
-    "border-primary-green": color === "green",
-    "border-primary-yellow": color === "yellow",
-    "border-primary-cray": color === "cray",
-    "border-primary-purple": color === "purple",
-    "border-primary-orange": color === "orange",
+  const backgroundColors = {
+    "bg-primary-blue": color === "blue",
+    "bg-primary-red": color === "red",
+    "bg-primary-green": color === "green",
+    "bg-primary-yellow": color === "yellow",
+    "bg-primary-cray": color === "cray",
+    "bg-primary-purple": color === "purple",
+    "bg-primary-orange": color === "orange",
   };
 
   const textColors = {
@@ -157,7 +158,25 @@ function PortfolioPage() {
                 className="lg:w-[48%] w-full aspect-[9/6] object-cover rounded-md"
               />
               <span className="lg:w-[48%] w-full">
+                <span className={cn("flex items-center gap-1", textColors)}>
+                  <p className="text-[16px]">Title</p>
+                </span>
                 <h1 className="lg:text-[40px] text-[40px]">{item.name}</h1>
+                <p className="text-[16px] font-thin">
+                  I’m an experienced and skilled frontend and mobile app
+                  developer with a strong background in developing user-friendly
+                  and
+                </p>
+                <Link href={`${item.url}`} target="_blank">
+                  <button
+                    className={cn(
+                      "px-10 py-3 text-black-1000 my-5 rounded-full font-semibold",
+                      backgroundColors
+                    )}
+                  >
+                    View Project
+                  </button>
+                </Link>
               </span>
             </span>
           ))}

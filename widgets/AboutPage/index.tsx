@@ -57,37 +57,37 @@ function AboutPage() {
     {
       name: "Web Development",
       description:
-        "I’m an experienced and skilled frontend and mobile app developer with a strong background in developing user-friendly and visually appealing websites",
+        "I have extensive expertise and experience in web development, making me a highly skilled professional in this field.",
       icon: Monitor,
     },
     {
       name: "Mobile App Development",
       description:
-        "I’m an experienced and skilled frontend and mobile app developer with a strong background in developing user-friendly and visually appealing websites",
+        "I’m an experienced and skilled mobile app developer with a strong background in developing user-friendly and visually appealing Applications",
       icon: Mobile,
     },
     {
       name: "Web App Development",
       description:
-        "I’m an experienced and skilled frontend and mobile app developer with a strong background in developing user-friendly and visually appealing websites",
+        "I am capable of ensuring that web applications are well built and and up to standard and are responsive and accessible on all devices.a",
       icon: Monitor,
     },
     {
       name: "iOS Development",
       description:
-        "I’m an experienced and skilled frontend and mobile app developer with a strong background in developing user-friendly and visually appealing websites",
+        "I’m an experienced and skilled mobile app developer with a strong background in developing user-friendly and visually appealing Applications",
       icon: CpuCharge,
     },
     {
       name: "Website Optimization",
       description:
-        "I’m an experienced and skilled frontend and mobile app developer with a strong background in developing user-friendly and visually appealing websites",
+        "I possess the knowledge and skills to optimize website performance, reduce loading time and enhance user experience. ",
       icon: MonitorMobbile,
     },
     {
       name: "Mobile App Optimization",
       description:
-        "I’m an experienced and skilled frontend and mobile app developer with a strong background in developing user-friendly and visually appealing websites",
+        "I possess the knowledge and skills to optimize Mobile App performance, reduce loading time and enhance user experience. ",
       icon: MobileProgramming,
     },
   ];

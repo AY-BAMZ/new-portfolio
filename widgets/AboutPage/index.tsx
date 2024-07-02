@@ -185,7 +185,7 @@ function AboutPage() {
             </span>
             <span className="col-span-1 flex gap-4">
               <a
-                href="/assets/myfile.pdf"
+                href="/myfile.pdf"
                 download="Ayobami Paul Adegbohungbe Resume"
                 style={{ alignItems: "left", display: "flex" }}
               >

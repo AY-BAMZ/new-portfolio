@@ -7,6 +7,7 @@ import { userThemeStorage } from "@/lib/localStorage";
 import { cn } from "@/lib";
 import { Setting2 } from "iconsax-react";
 import { useThemeContext } from "@/contetxt/ThemeContext";
+import { useSpring, animated } from "@react-spring/web";
 
 function Wrapper({ children }: any) {
   const colors = ["blue", "red", "green", "yellow", "cray", "purple", "orange"];
@@ -17,6 +18,12 @@ function Wrapper({ children }: any) {
     setColor(item);
   };
   const [open, setOpen] = useState(false);
+
+  const groupAnimation = useSpring({
+    transform: open ? "translateX(0)" : "translateX(100%)",
+    opacity: open ? 1 : 0,
+    config: { tension: 210, friction: 20 },
+  });
   return (
     <div className="relative">
       <ParticlesJs />
@@ -32,16 +39,31 @@ function Wrapper({ children }: any) {
         </span>
       </div>
       <span className="fixed top-3 right-0 ">
+        {!open ? (
+          <span
+            className="text-[12px] bg-[#00000060] p-2 rounded-l-xl flex items-center gap-1 pr-4 cursor-pointer"
+            onClick={() => setOpen(true)}
+          >
+            <Setting2 variant="Bold" /> Change Theme
+          </span>
+        ) : (
+          <span
+            className="text-[12px] bg-[#00000060] p-2 rounded-l-xl flex items-center gap-1 pr-4 cursor-pointer"
+            onClick={() => setOpen(false)}
+          >
+            <Setting2 variant="Bold" /> Close Theme
+          </span>
+        )}
         {open && (
-          <Group
-            className="max-w-[120px] bg-[#00000060] p-2 rounded-l-xl"
-            gap={4}
+          <animated.div
+            style={groupAnimation}
+            className="max-w-[120px] bg-[#00000060] p-2 rounded-l-xl flex flex-wrap gap-1"
           >
             {colors.map((item, index) => (
               <span
                 key={index}
                 onClick={() => setTheme(item)}
-                className={cn("w-8 h-8 rounded-full border", {
+                className={cn("w-8 h-8 rounded-full border cursor-pointer", {
                   "bg-primary-blue": item === "blue",
                   "bg-primary-red": item === "red",
                   "bg-primary-green": item === "green",
@@ -52,22 +74,7 @@ function Wrapper({ children }: any) {
                 })}
               ></span>
             ))}
-          </Group>
-        )}
-        {!open ? (
-          <span
-            className="text-[12px] bg-[#00000060] p-2 rounded-l-xl flex  items-center gap-1 pr-4 cursor-pointer"
-            onClick={() => setOpen(true)}
-          >
-            <Setting2 variant="Bold" /> Change Theme
-          </span>
-        ) : (
-          <span
-            className="text-[12px] bg-[#00000060] p-2 rounded-l-xl flex  items-center gap-1 pr-4 cursor-pointer"
-            onClick={() => setOpen(false)}
-          >
-            <Setting2 variant="Bold" /> Close Theme
-          </span>
+          </animated.div>
         )}
       </span>
     </div>

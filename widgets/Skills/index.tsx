@@ -1,9 +1,8 @@
 import Title from "@/components/Title";
 import { useThemeContext } from "@/contetxt/ThemeContext";
 import { cn } from "@/lib";
-import { getTheme } from "@/lib/localStorage";
 import { Progress, RingProgress, ScrollArea, Text } from "@mantine/core";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 function SkillsPage() {
   const ratings = [

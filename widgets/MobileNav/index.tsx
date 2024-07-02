@@ -1,5 +1,5 @@
+import { useThemeContext } from "@/contetxt/ThemeContext";
 import { cn } from "@/lib";
-import { getTheme } from "@/lib/localStorage";
 import {
   Book1,
   BrifecaseTick,
@@ -8,7 +8,6 @@ import {
   HomeHashtag,
   UserOctagon,
 } from "iconsax-react";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 
@@ -48,21 +47,15 @@ function MobileNav() {
     },
   ];
   console.log("pathname :>> ", pathname);
-  const theme = getTheme();
   const [active, setActive] = useState(links[0]?.text);
 
-  const [color, setColor] = useState("orange");
+  const { color }: any = useThemeContext();
 
   useEffect(() => {
-    if (theme) {
-      setColor(theme);
-    } else {
-      setColor("orange");
-    }
     if (pathname) {
       setActive(pathname);
     }
-  }, [theme]);
+  }, []);
 
   const handleSelect = (value: any) => {
     setActive(value?.link);

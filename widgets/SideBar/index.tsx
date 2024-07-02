@@ -1,6 +1,5 @@
 import { useThemeContext } from "@/contetxt/ThemeContext";
 import { cn } from "@/lib";
-import { getTheme } from "@/lib/localStorage";
 import {
   Book1,
   BrifecaseTick,

@@ -1,21 +1,13 @@
 import Title from "@/components/Title";
+import { useThemeContext } from "@/contetxt/ThemeContext";
 import { cn } from "@/lib";
-import { getTheme } from "@/lib/localStorage";
 import { ScrollArea } from "@mantine/core";
 import { LocationTick } from "iconsax-react";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 function ExperiencePage() {
-  const theme = getTheme();
-  const [color, setColor] = useState("");
+  const { color }: any = useThemeContext();
 
-  useEffect(() => {
-    if (theme) {
-      setColor(theme);
-    } else {
-      setColor("orange");
-    }
-  }, [theme]);
   const textColors = {
     "text-primary-blue": color === "blue",
     "text-primary-red": color === "red",

@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import ParticlesJs from "@/components/Particles";
 import SideBar from "@/widgets/SideBar";
 import MobileNav from "../MobileNav";
-import { useDisclosure } from "@mantine/hooks";
-import { Dialog, Group } from "@mantine/core";
-import { getTheme, userThemeStorage } from "@/lib/localStorage";
+import { Group } from "@mantine/core";
+import { userThemeStorage } from "@/lib/localStorage";
 import { cn } from "@/lib";
 import { Setting2 } from "iconsax-react";
 import { useThemeContext } from "@/contetxt/ThemeContext";

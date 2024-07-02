@@ -93,6 +93,16 @@ function AboutPage() {
     { name: "Trading", icon: PresentionChart },
     { name: "Crypto", icon: BinanceCoin },
   ];
+  const backgroundColors = {
+    "bg-primary-blue": color === "blue",
+    "bg-primary-red": color === "red",
+    "bg-primary-green": color === "green",
+    "bg-primary-yellow": color === "yellow",
+    "bg-primary-cray": color === "cray",
+    "bg-primary-purple": color === "purple",
+    "bg-primary-orange": color === "orange",
+  };
+
   return (
     <ScrollArea className="h-screen">
       <div className="w-full lg:px-16 p-6 flex flex-col gap-8 py-6 bg-[#0E0F10]">
@@ -173,7 +183,22 @@ function AboutPage() {
                 <p className={cn("text-[13px]", textColors)}>Available</p>
               </span>
             </span>
-            <span className="flex gap-4 col-span-1"></span>
+            <span className="col-span-1 flex gap-4">
+              <a
+                href="/assets/myfile.pdf"
+                download="Ayobami Paul Adegbohungbe Resume"
+                style={{ alignItems: "left", display: "flex" }}
+              >
+                <button
+                  className={cn(
+                    "px-10 py-3 text-black-1000  rounded-full font-semibold",
+                    backgroundColors
+                  )}
+                >
+                  Download Resume
+                </button>
+              </a>
+            </span>
           </span>
         </span>
         <span className="my-12 w-full">
@@ -206,7 +231,7 @@ function AboutPage() {
             {interests.map((item, index) => (
               <span
                 key={index}
-                className="flex items-center  gap-4 col-span-1 bg-[#0E0F10] p-6 py-5 rounded-2xl upper-trans"
+                className="flex items-center  gap-4 col-span-1 bg-[#0E0F10] p-6 py-5 rounded-2xl upper-trans  lg:justify-start justify-center"
               >
                 <item.icon
                   size={28}

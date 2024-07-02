@@ -1,4 +1,5 @@
 import Title from "@/components/Title";
+import { useThemeContext } from "@/contetxt/ThemeContext";
 import { cn } from "@/lib";
 import { getTheme } from "@/lib/localStorage";
 import { Progress, RingProgress, ScrollArea, Text } from "@mantine/core";
@@ -48,16 +49,7 @@ function SkillsPage() {
     },
   ];
 
-  const theme = getTheme();
-  const [color, setColor] = useState("");
-
-  useEffect(() => {
-    if (theme) {
-      setColor(theme);
-    } else {
-      setColor("orange");
-    }
-  }, [theme]);
+  const { color }: any = useThemeContext();
 
   const textColors = {
     "text-primary-blue": color === "blue",

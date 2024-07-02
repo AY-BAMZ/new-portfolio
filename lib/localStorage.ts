@@ -1,15 +1,14 @@
 export const checkDomWindow = () => {
-  return typeof window !== 'undefined';
+  return typeof window !== "undefined";
 };
 
-export function userauthstorage({
-theme}: any) {
-  localStorage.setItem('theme', theme);
+export function userThemeStorage({ theme }: any) {
+  localStorage.setItem("theme", theme);
 }
 
 export const getTheme = () => {
   if (checkDomWindow()) {
-    return localStorage.getItem('theme');
+    return localStorage.getItem("theme");
   }
   return null;
 };

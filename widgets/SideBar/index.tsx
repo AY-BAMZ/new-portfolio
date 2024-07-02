@@ -1,3 +1,4 @@
+import { useThemeContext } from "@/contetxt/ThemeContext";
 import { cn } from "@/lib";
 import { getTheme } from "@/lib/localStorage";
 import {
@@ -49,21 +50,14 @@ function SideBar() {
     },
   ];
 
-  const theme = getTheme();
+  const { color }: any = useThemeContext();
   const [active, setActive] = useState(links[0]?.text);
 
-  const [color, setColor] = useState("orange");
-
   useEffect(() => {
-    if (theme) {
-      setColor(theme);
-    } else {
-      setColor("orange");
-    }
     if (pathname) {
       setActive(pathname);
     }
-  }, [theme]);
+  }, []);
 
   const handleSelect = (value: any) => {
     setActive(value?.link);

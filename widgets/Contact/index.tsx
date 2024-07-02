@@ -1,6 +1,6 @@
 import Title from "@/components/Title";
+import { useThemeContext } from "@/contetxt/ThemeContext";
 import { cn } from "@/lib";
-import { getTheme } from "@/lib/localStorage";
 import { ScrollArea } from "@mantine/core";
 import {
   Call,
@@ -10,19 +10,10 @@ import {
   Whatsapp,
   Xrp,
 } from "iconsax-react";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 function ContactPage() {
-  const theme = getTheme();
-  const [color, setColor] = useState("");
-
-  useEffect(() => {
-    if (theme) {
-      setColor(theme);
-    } else {
-      setColor("orange");
-    }
-  }, [theme]);
+  const { color }: any = useThemeContext();
 
   const backgroundColors = {
     "bg-primary-blue": color === "blue",

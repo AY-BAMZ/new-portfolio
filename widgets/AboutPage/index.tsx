@@ -1,6 +1,6 @@
 import Title from "@/components/Title";
+import { useThemeContext } from "@/contetxt/ThemeContext";
 import { cn } from "@/lib";
-import { getTheme } from "@/lib/localStorage";
 import { ScrollArea } from "@mantine/core";
 import {
   BinanceCoin,
@@ -20,19 +20,10 @@ import {
   VideoPlay,
 } from "iconsax-react";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 function AboutPage() {
-  const theme = getTheme();
-  const [color, setColor] = useState("");
-
-  useEffect(() => {
-    if (theme) {
-      setColor(theme);
-    } else {
-      setColor("orange");
-    }
-  }, [theme]);
+  const { color }: any = useThemeContext();
 
   const borderColors = {
     "border-primary-blue": color === "blue",

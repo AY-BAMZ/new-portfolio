@@ -6,7 +6,7 @@ export default function HomePage() {
     <Wrapper>
       <span className="flex flex-col lg:gap-4 gap-2 items-center">
         <Image
-          src="https://res.cloudinary.com/dmixz7eur/image/upload/v1718836708/21A17C5B-0536-4E7B-945C-F67C766385BB_1_201_a_saj6vf.jpg"
+          src="https://res.cloudinary.com/dmixz7eur/image/upload/v1720629973/Rectangle_4049_wrppju.png"
           alt=""
           width={260}
           height={260}

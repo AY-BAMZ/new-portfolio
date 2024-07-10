@@ -12,6 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
+import Logo from "@/assets/mylogo.svg";
 
 function SideBar() {
   const router = useRouter();
@@ -66,11 +67,16 @@ function SideBar() {
     <span className="flex flex-col h-[100vh] w-[150px] bg-[#00000035]">
       <span className="w-full flex items-center justify-center aspect-square border-b-[1px] border-b-black-500">
         <Link href={`/`}>
-          <Image
-            src="https://res.cloudinary.com/dmixz7eur/image/upload/v1673583454/my%20portfolio/logo_wzrddg.png"
-            alt=""
-            width={64}
-            height={64}
+          <Logo
+            className={cn("", {
+              "text-primary-blue": color === "blue",
+              "text-primary-red": color === "red",
+              "text-primary-green": color === "green",
+              "text-primary-yellow": color === "yellow",
+              "text-primary-cray": color === "cray",
+              "text-primary-purple": color === "purple",
+              "text-primary-orange": color === "orange",
+            })}
           />
         </Link>
       </span>

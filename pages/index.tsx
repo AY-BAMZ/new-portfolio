@@ -1,9 +1,17 @@
 import Wrapper from "@/widgets/Wrapper";
+import Image from "next/image";
 
 export default function HomePage() {
   return (
     <Wrapper>
       <span className="flex flex-col lg:gap-4 gap-2 items-center">
+        <Image
+          src="https://res.cloudinary.com/dmixz7eur/image/upload/v1718836708/21A17C5B-0536-4E7B-945C-F67C766385BB_1_201_a_saj6vf.jpg"
+          alt=""
+          width={260}
+          height={260}
+          className="object-cover aspect-square w-[260px] h-auto rounded-full mx-auto"
+        />
         <h1 className="lg:text-[52px] text-[40px] text-center">
           Ayobami Paul Ade.
         </h1>

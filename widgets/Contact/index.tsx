@@ -7,6 +7,7 @@ import {
   CodeCircle,
   Instagram,
   OceanProtocol,
+  Sms,
   Whatsapp,
   Xrp,
 } from "iconsax-react";
@@ -39,7 +40,7 @@ function ContactPage() {
     { text: "+234906 682 1545", icon: Call, link: "+2349066821545" },
     {
       text: "aybamz181@gmail.com",
-      icon: Call,
+      icon: Sms,
       link: "mailto:aybamz181@gmail.com",
     },
     {

@@ -19,6 +19,18 @@ function SkillsPage() {
       rate: 95,
     },
     {
+      skill: "NodeJS & Express",
+      rate: 95,
+    },
+    {
+      skill: "NodeJS & Express",
+      rate: 95,
+    },
+    {
+      skill: "ML and AI",
+      rate: 75,
+    },
+    {
       skill: "Next JS",
       rate: 90,
     },
@@ -32,11 +44,11 @@ function SkillsPage() {
     },
     {
       skill: "Swift",
-      rate: 75,
+      rate: 80,
     },
     {
       skill: "SwiftUI",
-      rate: 70,
+      rate: 85,
     },
     {
       skill: "Tailwind",
@@ -45,6 +57,10 @@ function SkillsPage() {
     {
       skill: "Redux",
       rate: 90,
+    },
+    {
+      skill: "DevOps",
+      rate: 70,
     },
   ];
 

@@ -5,6 +5,7 @@ import { ScrollArea } from "@mantine/core";
 import {
   BinanceCoin,
   Book1,
+  Code1,
   Cpu,
   CpuCharge,
   Game,
@@ -46,9 +47,9 @@ function AboutPage() {
   };
   const services = [
     {
-      name: "Web Development",
+      name: "FrontEnd Development",
       description:
-        "I have extensive expertise and experience in web development, making me a highly skilled professional in this field.",
+        "I have extensive expertise and experience in FrontEnd development, making me a highly skilled professional in this field.",
       icon: Monitor,
     },
     {
@@ -58,9 +59,21 @@ function AboutPage() {
       icon: Mobile,
     },
     {
+      name: "BackEnd Development",
+      description:
+        "As a professional backend developer, I utilize Node.js and Express to develop and deploy robust backend services.",
+      icon: Code1,
+    },
+    {
+      name: "FullStack Development",
+      description:
+        "I have extensive expertise and experience in FrontEnd and Backend development, making me a highly skilled professional in this field.",
+      icon: Monitor,
+    },
+    {
       name: "Web App Development",
       description:
-        "I am capable of ensuring that web applications are well built and and up to standard and are responsive and accessible on all devices.a",
+        "I am capable of ensuring that web applications are well built and and up to standard and are responsive and accessible on all devices",
       icon: Monitor,
     },
     {
@@ -125,13 +138,13 @@ function AboutPage() {
                 <p className="text-[16px]">Lagos Nigeria</p>
               </span>
               <p className="text-[16px] font-thin">
-                I’m an experienced and skilled frontend and mobile app developer
-                with a strong background in developing user-friendly and
+                I’m an experienced and skilled FullStack & mobile app developer
+                with a strong background in developing user- friendly and
                 visually appealing websites and mobile applications using a
                 variety of languages and frameworks such as REACT JS and REACT
-                NATIVE. I have proven ability to work independently and as part
-                of a team to deliver high-quality software on time and within
-                budget. <br /> <br />
+                NATIVE, NODE JS, SWIFT UI. I have proven ability to work
+                independently and as part of a team to deliver high-quality
+                software on time and within budget. <br /> <br />
                 My skills include having the ability to listen and communicate
                 with others verbally and in writing. This is very important in
                 order to collaborate with team members and solve problems. I

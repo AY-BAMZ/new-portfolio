@@ -30,6 +30,14 @@ function PortfolioPage() {
   };
   const projects = [
     {
+      name: "Ask It",
+      description:
+        "AskIt is a platform where you can share your questionnaire with a large & personalized target audience and get reliable feedback for your surveys",
+      url: "https://askit.biz/",
+      image:
+        "https://res.cloudinary.com/dmixz7eur/image/upload/v1734946539/Frame_799_m09kfv.png",
+    },
+    {
       name: "NinthGrid",
       description:
         "Ninthgrid is an image sourcing platform that helps users to Access high-quality Afrocentric images exclusively crafted by Black creators",

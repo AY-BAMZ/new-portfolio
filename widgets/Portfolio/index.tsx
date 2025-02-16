@@ -30,6 +30,14 @@ function PortfolioPage() {
   };
   const projects = [
     {
+      name: "Komo AI",
+      description:
+        "Komo AI is a cutting-edge generative AI platform designed to serve as an advanced search and research tool. It offers a wide range of functionalities tailored to support diverse research needs, making it an invaluable resource for gathering, analyzing, and synthesizing information efficiently.",
+      url: "https://komo.ai/",
+      image:
+        "https://res.cloudinary.com/dmixz7eur/image/upload/v1739695732/Frame_800_iyrefq.jpg",
+    },
+    {
       name: "Ask It",
       description:
         "AskIt is a platform where you can share your questionnaire with a large & personalized target audience and get reliable feedback for your surveys",

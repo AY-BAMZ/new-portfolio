@@ -198,7 +198,7 @@ function AboutPage() {
             </span>
             <span className="col-span-1 flex gap-4">
               <a
-                href="/Ayobami-Paul--Resume.pdf"
+                href="/ayobamipaulresume.pdf"
                 download="Ayobami Paul Adegbohungbe Resume"
                 style={{ alignItems: "left", display: "flex" }}
               >

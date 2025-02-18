@@ -51,7 +51,7 @@ function ContactPage() {
     {
       text: "LinkedIn",
       icon: OceanProtocol,
-      link: "https://www.linkedin.com/in/ayobami-paul-4bb370259/",
+      link: "https://linkedin.com/in/ayobami-paul/",
     },
     {
       text: "WhatsApp",
